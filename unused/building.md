@@ -30,7 +30,6 @@ the next step is a little hard:
 
 writing this program could be hard but we have the worlds most safe language to help us: rust, btw.
 
-
 security
 
 docker
@@ -44,5 +43,4 @@ using ssh into a server
 
 dont use ssh beacuse having multipule people logged into the same user (thats bad bc linux is bad at managing shared resources)
 instead setup an irc chat where people can type commands (also create different user for each memeber bc linux is good with shared resources)
-
 

@@ -1,6 +1,8 @@
 ---
-title: Scurvyless
+title: Home
 ---
+
+# Scurvyless
 **Do Less, Be More, Eat Citris**
 
 <pre>
@@ -16,15 +18,31 @@ title: Scurvyless
               ^    ~      /_|__\  ^
        ~               ^   \__/
 </pre>
+*source: wiby.me*
 
-## Pages
-- ENGR 110: See alternate home page [here](./community-design).
-- Dawn: A character creator for dawn rpg [here](https://dawn.gingerfocus.dev/).
+My ramblings about the world.
 
-### About Me
-I am Evan a sophmore at Santa Clara University working in cyber security and
-electrical engineering
-<!-- - [Email](mailto:evan.stokdyk@gmail.com) -->
+## Sections
+
+### [Manifestos](/blog)
+A collection of "thinkers"
+
+### [Tech](/tech)
+What I use and how
+
+<!-- ### [Writing](/write) 
+Stories for noone -->
+
+<!-- ### [Games](/games)
+Games I play -->
+
+<!-- ### [Metro Star](/metro)
+Better restraunt grades -->
+
+## About Me
+
+### Contact
+- [Email](mailto:evan.stokdyk@gmail.com)
 <!-- - [Phone](tel:+1234567890) -->
 
 <!-- <img src="/human-made-mark.svg" /> -->

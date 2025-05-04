@@ -1,3 +1,6 @@
+---
+title: Games
+---
 # Games
 
 ## Table Top Games

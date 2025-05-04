@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$">
 <head>
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
@@ -13,14 +13,30 @@ $if(keywords)$
 $endif$
 $if(description-meta)$
     <meta name="description" content="$description-meta$" />
-$endif$
+$else$
     <meta name="description" content="Thinking for those who listen.">
+$endif$
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+$if(style)$
+    <link href="$style$" rel="stylesheet">
+$else$
     <link href="/style.css" rel="stylesheet">
+$endif$
     <link rel="icon" href="/favicon.png" />
 </head>
 <body>
+
+$if(no-header)$
 <div style="display: flex; align-items: center; justify-content: space-around;">
+    <a href="/community-design">Home</a>
+    <a href="/community-design/blog.html">Blog</a>
+    <a href="/community-design/project.html">Project</a>
+    <!-- <a href="/">Main</a> -->
+    <!-- <a href="https://github.com/focus172/scurvyless">Source</a> -->
+</div>
+$else$
+<div style="display: flex; align-items: center; justify-content: space-around;">
+    <a href="/">Home</a>
     <a href="/blog">Blog</a>
     <a href="/tech">Tech</a>
     <a href="/games">Games</a>
@@ -28,6 +44,8 @@ $endif$
     <a href="/write">Writing</a>
     <a href="https://github.com/focus172/scurvyless">Source</a>
 </div>
+$endif$
+
 $if(title)$
 <header id="title-block-header">
 <h1 class="title">$title$</h1>
@@ -42,9 +60,6 @@ $if(date)$
 $endif$
 </header>
 $endif$
-<!-- <nav id="$idprefix$TOC" role="doc-toc"> -->
-<!-- $table-of-contents$ -->
-<!-- </nav> -->
 $body$
 $for(include-after)$
 $include-after$

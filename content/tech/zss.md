@@ -1,4 +1,7 @@
-# zss
+---
+title: zss
+---
+
 zss is a terminal pager implemented with the least amount of features while
 still remaining functional.
 
@@ -22,7 +25,7 @@ In a similar way it also struggles with unicode characters or anything where
 its size in bytes in memory is not the same as its 
 
 ### Terminal Codes
-Right now, terminal codes are handled naivly with simple implemention.
+Right now, terminal codes are handled naively with simple implemention.
 
 ## Summary
 Right now the poject is functional, however, it has many correctness issues

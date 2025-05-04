@@ -1,3 +1,6 @@
+---
+title: Dear Leader
+---
 # Dear Leader
 
 Open Source software needs a president.
