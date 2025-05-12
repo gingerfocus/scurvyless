@@ -1,6 +1,6 @@
 ---
 title: Access Office Project
-no-header: 1
+engr-header: 1
 style: /community-design/style.css
 ---
 
@@ -17,7 +17,7 @@ the students as we aim to provide better more target servies.
 
 ## Links
 - [The Project](./project.html)
-- [Updates](./blog.html)
+- [Updates](./blog)
 
 ## About Us
 This group was put together on behalf of the school as part of the class. We
@@ -26,7 +26,18 @@ all share in interest in optimization problems and reducing food waste.
 ### Maya Bhattacharyya
 Enviromental engineer who is focused on data visualization and waste reduction.
 
-### Erik Keifer
-General engineer with a focus on data analysis and AI.
+<img src="./head-maya.jpg" class="headshot"/>
 
+### Erik Keifer
+General engineer with a focus on data analysis and AI. Mostly working on
+project management alongside presentations for our team. 
+
+<img src="./head-erik.jpg" class="headshot"/>
+
+### Evan Stokdyk
+This is me. I do all the coding on this project mixing frontend, backend along
+with server management. I am an electrical engineer with a passion for CS that
+allows me to create complext projects like this.
+
+<img src="./head-evan.jpg" class="headshot"/>
 

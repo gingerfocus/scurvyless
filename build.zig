@@ -71,7 +71,7 @@ pub fn build(b: *std.Build) void {
     var contentD = std.fs.openDirAbsolute(contentL.getPath(b), .{ .iterate = true }) catch unreachable;
     defer contentD.close();
 
-    const template = b.path("template.html");
+    const template = b.path("lib/template.html");
 
     iteraterDir(
         b,

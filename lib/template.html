@@ -27,23 +27,11 @@ $endif$
 <body>
 
 $if(no-header)$
-<div style="display: flex; align-items: center; justify-content: space-around;">
-    <a href="/community-design">Home</a>
-    <a href="/community-design/blog.html">Blog</a>
-    <a href="/community-design/project.html">Project</a>
-    <!-- <a href="/">Main</a> -->
-    <!-- <a href="https://github.com/focus172/scurvyless">Source</a> -->
-</div>
+    <div/>
+$elseif(engr-header)$
+    ${ engr-header.html() }
 $else$
-<div style="display: flex; align-items: center; justify-content: space-around;">
-    <a href="/">Home</a>
-    <a href="/blog">Blog</a>
-    <a href="/tech">Tech</a>
-    <a href="/games">Games</a>
-    <a href="/metro">Metro</a>
-    <a href="/write">Writing</a>
-    <a href="https://github.com/focus172/scurvyless">Source</a>
-</div>
+    ${ default-header.html() }
 $endif$
 
 $if(title)$
