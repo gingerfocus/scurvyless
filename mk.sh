@@ -5,12 +5,13 @@ case "$1" in
         rm -r public
         ;;
     "build" | "b")
-        ([ "$2" = "watch" ] || [ "$2" = "w" ]) && args="--watch"
-        ../zig/build/stage3/bin/zig build -p public $args
-        # zig build -p public $args
+        echo "Building scurvyless..."
+        ([ "$2" = "watch" ] || [ "$2" = "w" ]) && args="--watch" 
+        zig build -p public $args
         ;;
     "serve" | "s")
-        python3 -m http.server -d public/
+        # cd public && python3 -m http.server -d public/
+        bun x browser-sync start --server "public/" --files "**/*.html, **/*.css, **/*.js"
         ;;
     "deploy" | "D")
         rsync -r public/ root@gingerfocus.dev:/var/www/scurvyless
@@ -18,10 +19,10 @@ case "$1" in
     "develop" | "dev" | "d")
         [ -n "$TMUX" ] || (echo "Must be run in tmux" && exit 1)
 
-        tmux splitw -d -h -p 30 -c "$HOME/dev/scurvyless" 'nix run .#watch'
-        tmux splitw -d -t 1 'nix run .#serve'
+        tmux splitw -d -h -p 30 -c "$HOME/dev/scurvyless" './mk.sh build watch'
+        tmux splitw -d -t 1 './mk.sh serve'
         ;;
-    *)
+    "" | *)
         echo "usage: $0 build|clean|deploy|serve"
         exit 1
         ;;
