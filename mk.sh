@@ -11,7 +11,9 @@ case "$1" in
         ;;
     "serve" | "s")
         # cd public && python3 -m http.server -d public/
-        bun x browser-sync start --server "public/" --files "**/*.html, **/*.css, **/*.js"
+        # bun x browser-sync start --server "public/" --files "**/*.html, **/*.css, **/*.js"
+        # go run cmd/main.go
+        air
         ;;
     "deploy" | "D")
         rsync -r public/ root@gingerfocus.dev:/var/www/scurvyless

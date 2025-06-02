@@ -71,7 +71,7 @@ pub fn build(b: *std.Build) void {
     var contentD = std.fs.openDirAbsolute(contentL.getPath(b), .{ .iterate = true }) catch unreachable;
     defer contentD.close();
 
-    const template = b.path("lib/template.html");
+    const template = b.path("src/template.html");
 
     iteraterDir(
         b,
@@ -79,11 +79,4 @@ pub fn build(b: *std.Build) void {
         ".",
         template,
     ) catch unreachable;
-
-    // const run_cmd = b.addRunArtifact(exe);
-    // run_cmd.step.dependOn(b.getInstallStep());
-    // if (b.args) |args| run_cmd.addArgs(args);
-    //
-    // const run_step = b.step("run", "Run the app");
-    // run_step.dependOn(&run_cmd.step);
 }
