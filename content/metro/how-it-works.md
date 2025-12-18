@@ -1,11 +1,6 @@
 ---
 title: The Metro Star
-description-meta: The Least Important Ranking in Food
-lang: en
 ---
-
-**A tool for grading restraunts. Evaluated on a combinations of food,
-atmosphere, price and importantly accessablity by transit.**
 
 ## Ratings
 I have gone to a few restraunts but due to a condition known as being broke

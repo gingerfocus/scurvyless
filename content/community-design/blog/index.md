@@ -20,4 +20,5 @@ Read weekly updates on what progress is being made. Our weekly progress is track
 - [Week 6](./week-6.html)
 - [Week 7](./week-7.html)
 - [Week 8](./week-8.html)
+- [Week 9](./week-9.html)
 

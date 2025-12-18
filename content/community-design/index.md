@@ -1,7 +1,5 @@
 ---
 title: Access Office Project
-engr-header: 1
-style: /community-design/style.css
 ---
 
 This project was done as part of the ENGR110 Community Based Design Project

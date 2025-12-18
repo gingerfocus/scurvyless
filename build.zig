@@ -1,13 +1,23 @@
 const std = @import("std");
 
+const TEMPLATE_NAME = "_template.html";
 fn iteraterDir(
     b: *std.Build,
     src: struct { fs: std.fs.Dir, lazy: std.Build.LazyPath },
     out: []const u8,
-    template: std.Build.LazyPath,
+    roottemplate: std.Build.LazyPath,
 ) !void {
+    // see if we have a new template here or just use the previous one
+    // TODO: this might be a warning
+    const template = if (src.fs.access(TEMPLATE_NAME, .{})) blk: {
+        break :blk src.lazy.path(b, TEMPLATE_NAME);
+    } else |_| roottemplate;
+
     var iter = src.fs.iterate();
     while (try iter.next()) |file| {
+        // skip templates
+        if (std.mem.eql(u8, file.name, TEMPLATE_NAME)) continue;
+
         if (file.kind == .directory) {
             var nextDir = try src.fs.openDir(file.name, .{ .iterate = true });
             defer nextDir.close();

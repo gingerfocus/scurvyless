@@ -1,7 +1,5 @@
 ---
 title: The Project
-engr-header: 1
-style: /community-design/style.css
 ---
 
 For this project, will are creating a data visualization tool. The data

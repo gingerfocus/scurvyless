@@ -19,7 +19,7 @@ func (t *Templates) Render(w io.Writer, name string, data interface{}, c echo.Co
 }
 func newTemplate() *Templates {
     return &Templates{
-        templates: template.Must(template.ParseGlob("views/*.html")),
+        templates: template.Must(template.ParseGlob("src/views/*.html")),
     }
 }
 
@@ -68,7 +68,7 @@ func main() {
 
     search(e)
 
-    e.Static("/", "public")
+    e.Static("/", "_public")
 
     e.Logger.Fatal(e.Start(":6969"))
 }

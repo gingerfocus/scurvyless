@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="author" content="gingerfocus" />
+    <meta name="description" content="; DROP TABLE bookmarks;">
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+    <link href="/style.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" />
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: space-around;">
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/tech">Tech</a>
+        <a href="/metro">Metro</a>
+        <a href="https://github.com/focus172/scurvyless">Source</a>
+    </div>
+$if(title)$
+    <header id="title-block-header">
+        <h1 class="title">$title$</h1>
+    </header>
+$endif$
+
+    $body$
+
+</body>
+</html>

@@ -1,13 +1,15 @@
 #!/bin/sh
 
+BUILD_DIR="_public/"
+
 case "$1" in
     "clean" | "c")
-        rm -r public
+        rm -r $BUILD_DIR
         ;;
     "build" | "b")
         echo "Building scurvyless..."
         ([ "$2" = "watch" ] || [ "$2" = "w" ]) && args="--watch" 
-        zig build -p public $args
+        zig build -p $BUILD_DIR $args
         ;;
     "serve" | "s")
         # cd public && python3 -m http.server -d public/
@@ -16,7 +18,7 @@ case "$1" in
         air
         ;;
     "deploy" | "D")
-        rsync -r public/ root@gingerfocus.dev:/var/www/scurvyless
+        rsync -r $BUILD_DIR root@gingerfocus.dev:/var/www/scurvyless
         ;;
     "develop" | "dev" | "d")
         [ -n "$TMUX" ] || (echo "Must be run in tmux" && exit 1)

@@ -1,0 +1,17 @@
+[1]: Unigen. “Unigen Life Style Shop.” Accessed: Nov 18, 2025. [Online]. Available: https://www.unigenlifestyle.com/cdn/shop/articles/71gPpXNOksL._SL1500_1024x1024_85052fea-8318-4a55-a2ef-5196a388a988_1024x.webp?v=1673547982
+
+[2]: https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Inverse_square_law.svg/500px-Inverse_square_law.svg.png
+
+[3]: G. Moloudian et al., "RF Energy Harvesting Techniques for Battery-Less Wireless Sensing, Industry 4.0, and Internet of Things: A Review," in IEEE Sensors Journal, vol. 24, no. 5, pp. 5732-5745, 1 March, 2024.
+
+[4]: J. Lee, H. -H. Hsu, P. Davuluri, Y. Ho and J. Chen, "Impact of broadband and out-of-band radio frequency interference (RFI) noise on WiFi performance," 2017 IEEE International Symposium on Electromagnetic Compatibility & Signal/Power Integrity (EMCSI), Washington, DC, USA, 2017, pp. 456-457, doi: 10.1109/ISEMC.2017.8077913. 
+
+[5]: F. Lohrabi Pour, S. S. Ha, and D. S. Ha, ‘Effect of Power Conversion Efficiency of the RF Energy Harvester on the Security and Data Rate of the Self-Sustainable IoT Devices’, 2023, pp. 121–124.
+
+[7]: C. Song, Y. Huang, J. Zhou, S. Yuan, Q. Xu, and P. Carter, ‘A broadband efficient rectenna array for wireless energy harvesting’, 2015. (IEEE)
+
+[8]: F. Lohrabi Pour, S. S. Ha, and D. S. Ha, ‘Effect of Power Conversion Efficiency of the RF Energy Harvester on the Security and Data Rate of the Self-Sustainable IoT Devices’, 2023, pp. 121–124. (IEEE)
+
+[9]: https://upload.wikimedia.org/wikipedia/commons/6/69/Meissner_Patent.png
+
+[10]: metamaterials todo

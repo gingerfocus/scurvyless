@@ -1,0 +1,274 @@
+/*
+    A modified verion of (12/11/2025):
+    https://github.com/MarcosNicolau/obsidian-for-academia/blob/11aa6cf83abf03724abb67f3f950455f6f55cec0/.obsidian/snippets/academic.css
+*/
+
+/*
+    A modified version of https://github.com/NicklasVraa/Obsidian-academic-export/
+*/
+
+.academic a:link,
+.academic a:visited,
+.academic a {
+    /* Links. */
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Main body of text. ------------------------------------------------------------------ */
+.academic body {
+    tab-size: 4 !important;
+    color: black !important;
+    --code-background: white !important;
+    --code-normal: black !important;
+    background-color: white;
+    /* counter-reset: H2 H3 H4 !important; */
+}
+
+.academic p {
+    font-family: "Latin Modern Roman" !important;
+    font-size: 10pt !important;
+    /* text-align: justify !important; */
+    line-height: 1.2 !important;
+    margin-top: 5px !important;
+}
+.academic strong {
+    font-weight: bold !important;
+    color: inherit;
+}
+.academic em {
+    font-style: italic !important;
+    color: inherit;
+}
+
+/* Header styling and automatic numbering. --------------------------------------------- */
+.academic h1,
+.academic h2,
+.academic h3,
+.academic h4,
+.academic h5,
+.academic h6 {
+    font-family: "Latin Modern Roman" !important;
+    color: inherit !important; /* black */
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    line-height: 1 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 20px !important;
+}
+.academic h1 {
+    /* Title. */
+    font-family: "Latin Modern Roman Caps" !important;
+    text-align: center !important;
+    font-size: 18pt !important;
+    font-weight: normal !important;
+    margin-top: 0px !important;
+    counter-reset: H2;
+}
+.academic h6 {
+    /* Subtitle. */
+    font-family: "Latin Modern Roman Caps" !important;
+    text-align: center !important;
+    font-size: 11pt !important;
+    font-weight: normal !important;
+    margin-top: 6px !important;
+}
+.academic h2:before {
+    counter-increment: H2;
+    content: counter(H2) ". ";
+}
+
+.academic div:has(> h2), /* fixes wrapping div */
+.academic h2 {
+    counter-reset: H3 H4 !important;
+}
+
+/* H3 Logic */
+.academic h3:before {
+    counter-increment: H3 !important;
+    content: counter(H2) "." counter(H3) ". " !important;
+}
+.academic div:has(> h3), /* fixes wrapping div problem */
+.academic h3 {
+    counter-reset: H4 !important;
+}
+
+/* H4 Logic */
+.academic h4:before {
+    counter-increment: H4 !important;
+    content: counter(H2) "." counter(H3) "." counter(H4) ". " !important;
+}
+
+/* Credits. ---------------------------------------------------- */
+
+.academic del {
+    /* Credits, i.e. author information. */
+    font-family: "Latin Modern Roman" !important;
+    display: block !important;
+    text-align: center !important;
+    font-size: 10pt !important;
+    text-decoration: none;
+    margin-top: 8px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Code and math blocks. --------------------------------------------------------------- */
+.academic pre {
+    /* background and border of block. */
+    background-color: #fff !important;
+    border-style: dashed !important;
+    border-radius: 0px !important;
+    border-width: 1px 0px !important;
+    border-color: darkgray !important;
+    line-height: 1 !important;
+}
+.academic code {
+    font-family: "Latin Modern Mono" !important;
+    font-size: 10pt !important;
+    color: #292929 !important;
+}
+.academic mjx-math {
+    font-size: 90% !important;
+}
+.academic math-block {
+    page-break-before: avoid !important;
+}
+
+/* Figures. ---------------------------------------------------------------------------- */
+.academic svg,
+.academic img {
+    display: block !important;
+    /* filter: invert(100%) !important; */
+    page-break-inside: avoid !important;
+    page-break-after: avoid !important;
+    margin: 10px auto 5px !important;
+}
+.academic figcaption {
+    font-family: "Latin Modern Roman" !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+    font-size: 8pt !important;
+}
+
+/* Tables. ----------------------------------------------------------------------------- */
+.academic table,
+.academic pre {
+    page-break-inside: avoid !important;
+}
+.academic table {
+    font-family: Times !important;
+    font-size: 10pt !important;
+    text-align: center !important;
+    margin: 10px auto 5px !important;
+    border-top: 1px solid #292929 !important;
+    border-bottom: 1px solid #292929 !important;
+}
+.academic th {
+    /* Table headers. */
+    color: inherit !important; /* black */
+    font-weight: normal !important;
+    border: none !important;
+    border-bottom: 1px solid darkgray !important;
+    padding: 2px 5px !important;
+    font-size: 10pt !important;
+}
+.academic td {
+    border: none !important;
+    padding: 2px 5px !important;
+    font-size: 10pt !important;
+}
+
+/* Lists ------------------------------------------------------------------------------- */
+.academic ul,
+.academic ol,
+.academic dl {
+    page-break-before: avoid !important;
+    /* font-family: "Latin Modern Roman" !important; */
+    font-size: 10pt !important;
+    line-height: 1.1 !important;
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+.academic ul li {
+    /* Adjusts size of bullet points. */
+    list-style-type: none !important;
+    position: relative !important;
+}
+.academic ul li::before {
+    content: "•" !important;
+    position: absolute !important;
+    left: -1.15em !important;
+    top: -0.05em !important;
+    font-size: 1.1em !important;
+}
+
+/* Horizontal separator. --------------------------------------------------------------- */
+.academic hr {
+    /* Manual page-break using "---". */
+    border: none !important;
+    border-top: 0px solid lightgray !important;
+    page-break-after: always !important;
+}
+
+/* Additional settings. ---------------------------------------------------------------- */
+.academic blockquote {
+    display: block !important;
+    text-align: center !important;
+    font-size: 10pt !important;
+    color: inherit !important;
+    border: none !important;
+    padding: 0px !important;
+    margin: 5px auto !important;
+}
+.academic.mermaid {
+    /* Inline diagrams. */
+    color: inherit !important;
+}
+
+@media print {
+    /* Document-wide. ---------------------------------------------------------------------- */
+    @page {
+        /*
+            Notice that this will add a margin to all your pdf export, regardless if you don't have the "academic" class activated. 
+            To prevent, simply deactivate the css snippet from the obsidian config and activate it when you want to actually export it using the academic style 
+        */
+        margin: 2cm !important;
+
+        @top-right {
+            content: "Stokdyk " counter(page) ; /* counter(pages); */
+            font-family: "Latin Modern Roman" !important;
+            font-size: 10pt;
+            color: #555;
+        }
+
+        @top-left {
+            content: "12/11/25" " - " "ENGL181 Leither";
+            font-family: "Latin Modern Roman" !important;
+            font-size: 10pt;
+            color: #555;
+        }
+    }
+
+    /*
+        Adjust printing style only to have column output 
+        when the document is tagged with the fontmatter
+        cssclass of 'academic-two'
+    */
+    /* Document title to go across entire page */
+    .academic-two h1:first-of-type,
+    .academic-two h6:first-of-type,
+    .academic-two del:first-of-type {
+        column-span: all;
+        text-align: center;
+    }
+
+    /* Content broken up in academic-two */
+    .academic-two.markdown-preview-view {
+        column-count: 2;
+        column-rule: 1px solid transparent;
+        column-gap: 2em;
+    }
+}
