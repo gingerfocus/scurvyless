@@ -42,7 +42,16 @@
 
       devShells.default = pkgs.stdenv.mkDerivation {
         name = "scurvyless";
-        nativeBuildInputs = with pkgs; [pandoc rsync python3 bun go air gopls];
+        nativeBuildInputs = with pkgs; [
+          pandoc
+          rsync
+          # python3
+          # bun
+          # go
+          # air
+          # gopls
+          hugo
+                                       ];
 
         meta = {
           maintainers = ["Evan Stokdyk <evan.stokdyk@gmail.com>"];

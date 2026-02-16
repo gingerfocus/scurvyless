@@ -1,9 +1,11 @@
 ---
 title: Scurvyless
+publish: true
 ---
+
 **Do Less, Be More, Eat Citris**
 
-<pre>
+```
                |
      _.---.  \ _ /
     (_._ ) )--;_) =-
@@ -15,17 +17,31 @@ title: Scurvyless
 ^   ~          ~        ~  /| \
               ^    ~      /_|__\  ^
        ~               ^   \__/
-</pre>
+```
+*source: wiby.me*
 
-## Pages
-- ENGR 110: See alternate home page [here](./community-design).
-- Dawn: A character creator for dawn rpg [here](https://dawn.gingerfocus.dev/).
-- Presearch: Searching at the speed of thought [here](/search).
+My ramblings about the world.
 
-### About Me
-I am Evan a sophmore at Santa Clara University working in cyber security and
-electrical engineering
-<!-- - [Email](mailto:evan.stokdyk@gmail.com) -->
-<!-- - [Phone](tel:+1234567890) -->
+## Here
+Stuff to read.
 
-<!-- <img src="/human-made-mark.svg" /> -->
+- [Manifestos](/blog/): A collection of thinkers.
+<!-- - [Research](/resh/): Academic work I do ranging from professional to very casual. -->
+<!-- - [Fiction](/fict/): Stories for no one in particular. -->
+<!-- - [Metro Star](/metro/): Better restraunt grades. -->
+
+## There
+Stuff to do.
+
+- [Search](https://kamio.ink/search): Searching at the speed of thought.
+- [Ztreak](https://kamio.ink/streak): Habit forming wallpapers.
+<!-- - [Listen](https://kamio.ink/listen): My voice in the night. -->
+- [OpenDawn](https://dawn.gingerfocus.dev/): A character creator for Dawn RPG.
+
+## Where
+Stuff to talk.
+
+- [About](/about.html): Who am I?
+<!-- - [Resume](/#): TODO -->
+- [Email](mailto:evan.stokdyk@gmail.com): I try to respond to all comments.
+

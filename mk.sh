@@ -12,10 +12,10 @@ case "$1" in
         zig build -p $BUILD_DIR $args
         ;;
     "serve" | "s")
-        # cd public && python3 -m http.server -d public/
+        cd $BUILD_DIR && python3 -m http.server
         # bun x browser-sync start --server "public/" --files "**/*.html, **/*.css, **/*.js"
         # go run cmd/main.go
-        air
+        # air
         ;;
     "deploy" | "D")
         rsync -r $BUILD_DIR root@gingerfocus.dev:/var/www/scurvyless

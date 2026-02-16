@@ -2,6 +2,8 @@
 ## Site
 Website is hosted publically [here](https://gingerfocus.dev).
 
+https://github.com/panr/hugo-theme-terminal
+
 ## Developing
 To host locally:
 ```bash

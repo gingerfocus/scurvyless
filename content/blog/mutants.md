@@ -1,5 +1,7 @@
 # Mutants
-** Rust Mistakes
+
+## Rusts Mistakes
+
 The fault of java was oop when all you wanted was a function so why do we also
 do this in rust with &mut self. Dont use impl blocks for structs.
 + ok when it takes ownership of self or constructs self

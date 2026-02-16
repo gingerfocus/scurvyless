@@ -1,30 +1,43 @@
-<!DOCTYPE html>
+$if(publish)$
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
     <meta name="author" content="gingerfocus" />
-    <meta name="description" content="; DROP TABLE bookmarks;">
+    <meta name="description" content="; DROP TABLE bookmarks;" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-    <link href="/style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.png" />
-</head>
-<body>
-    <div style="display: flex; align-items: center; justify-content: space-around;">
+  </head>
+  <body>
+    <header>
+      <div class="banner-links">
         <a href="/">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/tech">Tech</a>
-        <a href="/metro">Metro</a>
-        <a href="https://github.com/focus172/scurvyless">Source</a>
-    </div>
-$if(title)$
-    <header id="title-block-header">
-        <h1 class="title">$title$</h1>
+        <a href="/blog/">Blog</a>
+        <!-- <a href="/fict">Fiction</a> -->
+        <!-- <a href="/resh">Research</a> -->
+        <!-- <a href="/metro">Metro</a> -->
+        <a href="https://github.com/gingerfocus/scurvyless">Source</a>
+      </div>
+      $if(title)$
+      <h1 class="title">$title$</h1>
+      $endif$
     </header>
-$endif$
 
     $body$
-
-</body>
+  </body>
 </html>
+$else$ Document not ready set to publish. $endif$
