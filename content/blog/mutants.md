@@ -1,4 +1,9 @@
-# Mutants
+---
+title: Mutants
+---
+
+A simple post about not doing instance method and mutations in rust
+then expand and be more general about 
 
 ## Rusts Mistakes
 

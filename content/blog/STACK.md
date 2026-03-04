@@ -1,3 +1,7 @@
+---
+title: Tech Stack
+---
+
 I want to control and enjoy my whole tech stack. I am also confused on what I
 want to make in life.
 

@@ -2,6 +2,7 @@
 title: Unlimited Power
 ---
 
+<!--
 ## Intro 3/3
 You set up your topic clearly by explaining Radio Frequency Energy Harvesting
 (RFEH) and why it matters. There is a hook in the question "What if there was
@@ -64,6 +65,7 @@ This still reads like a draft. I like the column format, but right now the
 organization is a bit messy, some of the visuals are too small and hard to
 read, and you have way too many bullet points. This needs more curation,
 explanation, detail, and work on dual engagement.
+-->
 
 **Powering Electronics: Radio Frequency Energy Harvesting (RFEH)**
 

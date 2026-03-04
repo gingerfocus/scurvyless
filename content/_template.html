@@ -17,10 +17,104 @@ $if(publish)$
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/typewriter.css"
+      media="print"
+      rel="stylesheet"
+    />
 
-    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>$pagetitle$</title>
+
     <link rel="icon" href="/favicon.png" />
+    <style>
+      :root {
+        --bg-color: #1a170f;
+        --fg-color: #eceae5;
+        --ac-color: #c77638; /* #eec35e; #673680; */
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--fg-color);
+        line-height: 1.2;
+        font-size: 0.95rem;
+        padding: 20px;
+        max-width: 800px;
+        font-family: "PT Serif", serif;
+      }
+
+      pre {
+        font-family: "Fira Code", monospace;
+        border-width: 1px;
+        border-color: var(--ac-color);
+        border-style: solid;
+        padding: 5px;
+        background-color: #10100a;
+        overflow: hidden;
+      }
+
+      a {
+        color: var(--ac-color);
+        text-decoration: none;
+      }
+
+      h2 {
+        margin: 10px;
+      }
+
+      .title {
+        padding: 5px;
+        font-size: 1.4rem;
+        background-color: var(--ac-color);
+        color: var(--bg-color);
+      }
+
+      .banner-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      @media print {
+        body {
+          line-height: 1.1;
+          font-size: 10pt;
+          font-family: "Computer Modern Typewriter", monospace;
+          color: #000 !important;
+          background: #fff !important;
+        }
+
+        .banner-links {display: none !important;}
+        .title {background-color: #fff !important;}
+        a { color: #000 !important;}
+
+        p {
+          margin: 0;
+          text-indent: 2em;
+          orphans: 3;
+          widows: 3;
+        }
+
+        h1, h2, h3, h4, h5 {
+          font-size: 10pt !important;
+          margin: 1em 0 0 0;
+          padding: 0;
+          page-break-after: avoid;
+        }
+
+        h1 {
+          border-bottom: 0.5pt solid black;
+          margin-bottom: 1em;
+          display: block;
+        }
+
+        h2 {font-weight: bold;}
+
+        h3, h4, h5 {font-style: italic;}
+
+    </style>
   </head>
   <body>
     <header>
@@ -36,7 +130,6 @@ $if(publish)$
       <h1 class="title">$title$</h1>
       $endif$
     </header>
-
     $body$
   </body>
 </html>

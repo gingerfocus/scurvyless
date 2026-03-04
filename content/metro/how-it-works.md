@@ -1,6 +1,9 @@
 ---
-title: The Metro Star
+title: Metro Star Ratings
 ---
+
+**A tool for grading restraunts. Evaluated on a combinations of food,
+atmosphere, price and importantly accessablity by transit.**
 
 ## Ratings
 I have gone to a few restraunts but due to a condition known as being broke
@@ -10,11 +13,7 @@ none of them have been truly great.
 
 ### Food
 
-
-
 ### Atmosphere
-
-
 
 ### Transit
 Transit means more than just system in place around the restraunt, it is also

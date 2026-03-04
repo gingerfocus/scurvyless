@@ -1,7 +1,5 @@
 ---
 title: A Better Text Editor
-draft: true
 ---
 
-TOD
-O
+TODO: blog post about why i am making it

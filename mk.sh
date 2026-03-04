@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUILD_DIR="_public/"
+BUILD_DIR=".public/"
 
 case "$1" in
     "clean" | "c")
@@ -18,7 +18,7 @@ case "$1" in
         # air
         ;;
     "deploy" | "D")
-        rsync -r $BUILD_DIR root@gingerfocus.dev:/var/www/scurvyless
+        rsync -rv $BUILD_DIR focus@gingerfocus.dev:/var/www/scurvyless --delete
         ;;
     "develop" | "dev" | "d")
         [ -n "$TMUX" ] || (echo "Must be run in tmux" && exit 1)
