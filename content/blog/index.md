@@ -5,19 +5,18 @@ publish: true
 
 **For your reading pleasure**
 
-<!--
 ```
-   /^==-^
-   \ . ./ @@@^=-_
-    \    _       =\
-    /==\         ..\
-    |   \      /....\
-     \   \ /  /.....|
-      \   /  / .....|
-    _._\ /  /.......|
- ._/  _____/__-.....|@@
- / \_/   /........./@@@@
- \    --/...__----=@@@@@@@@@
+   .^==-^                    
+   | . . @-@@^=-_            
+   *\    /       =\          
+    .--,         ..\         
+    |   \      /....\        
+     \   \ /  /.....|        
+      \   /  / .....|        
+    _._\ /  /.......|        
+ ._/  _____/__-.....|@@      
+ / \_/   /........./@@@@     
+ \    --/...__----=@@@@@@@@@ 
   \  .\.\..\@@@@@@@@@@@@@.@@@
    \  @\.\..\@@@@@@@@@.@@..@@
     \ @@\ \..\@@@@@@@.@@@...@
@@ -27,7 +26,6 @@ publish: true
      @@@  .@@@@@.@@@@@@@@@@@@
 ```
 *Rodin's The Thinker*
--->
 
 I do a lot of thinking and this is where I cronical them. The articles are
 presented in the order written.
@@ -36,5 +34,6 @@ presented in the order written.
 
 However, if you would like to read some articles I am proud of you can look at:
 
-- [Please Stop Financializing Innovation](./002.html)
+- [On Morality](./000.html)
+- [On Monitary](./002.html)
 
