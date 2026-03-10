@@ -1,30 +1,20 @@
 #!/bin/sh
 
-BUILD_DIR=".public/"
+BUILD=".public/"
 
 case "$1" in
     "clean" | "c")
-        rm -r $BUILD_DIR
+        rm -r $BUILD
         ;;
     "build" | "b")
-        echo "Building scurvyless..."
         ([ "$2" = "watch" ] || [ "$2" = "w" ]) && args="--watch" 
-        zig build -p $BUILD_DIR $args
+        zig build -p $BUILD $args
         ;;
     "serve" | "s")
-        cd $BUILD_DIR && python3 -m http.server
-        # bun x browser-sync start --server "public/" --files "**/*.html, **/*.css, **/*.js"
-        # go run cmd/main.go
-        # air
+        cd $BUILD && python3 -m http.server
         ;;
-    "deploy" | "D")
-        rsync -rv $BUILD_DIR focus@104.207.148.71:/var/www/scurvyless --delete
-        ;;
-    "develop" | "dev" | "d")
-        [ -n "$TMUX" ] || (echo "Must be run in tmux" && exit 1)
-
-        tmux splitw -d -h -p 30 -c "$HOME/dev/scurvyless" './mk.sh build watch'
-        tmux splitw -d -t 1 './mk.sh serve'
+    "deploy" | "d")
+        rsync -rv $BUILD focus@104.207.148.71:/var/www/scurvyless --delete
         ;;
     "" | *)
         echo "usage: $0 build|clean|deploy|serve"

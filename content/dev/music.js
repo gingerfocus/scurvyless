@@ -18,13 +18,12 @@ let playlist;
 
 // ffmpeg -y -i 01-sonora.ogg -c:a libopus -b:a 16k -vn -map_metadata -1 test2.ogg
 
-
 const audio = document.getElementById("main-audio");
 
-const toggBtn = document.getElementById("play-pause-btn");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-const copyBtn = document.getElementById("copy-btn");
+const toggBtn = document.getElementById("music-togg-btn");
+const prevBtn = document.getElementById("music-prev-btn");
+const nextBtn = document.getElementById("music-next-btn");
+const copyBtn = document.getElementById("music-copy-btn");
 
 let index = 0;
 
@@ -34,7 +33,6 @@ function playnext() {
     loadsong();
 }
 
-// Your existing playRandom function from before...
 function loadsong() {
     // yes this skips the first index, its randomized, who cares
     audio.src = playlist[index].song;
@@ -56,12 +54,10 @@ toggBtn.addEventListener("click", () => {
     }
 });
 
-// Update UI when audio starts playing
 audio.addEventListener("play", () => {
     toggBtn.innerText = "STOP";
 });
 
-// Update UI when audio pauses
 audio.addEventListener("pause", () => {
     toggBtn.innerText = "PLAY";
 });
@@ -78,34 +74,36 @@ copyBtn.addEventListener("click", () => {
 
 audio.addEventListener("ended", playnext);
 
-barba.init({
-    transitions: [
-        {
-            name: "fade",
-            leave(data) {
-                return new Promise((resolve) => {
-                    data.current.container.style.opacity = 0;
-                    setTimeout(resolve, 300);
-                });
+if (barba) {
+    barba.init({
+        transitions: [
+            {
+                name: "fade",
+                leave(data) {
+                    return new Promise((resolve) => {
+                        data.current.container.style.opacity = 0;
+                        setTimeout(resolve, 300);
+                    });
+                },
+                enter(data) {
+                    data.next.container.style.opacity = 0;
+                    setTimeout(() => {
+                        data.next.container.style.opacity = 1;
+                    }, 10);
+                },
             },
-            enter(data) {
-                data.next.container.style.opacity = 0;
-                setTimeout(() => {
-                    data.next.container.style.opacity = 1;
-                }, 10);
-            },
-        },
-    ],
-});
-
-// prevents loading the same page
-document.querySelectorAll("nav a").forEach((link) => {
-    link.addEventListener("click", (e) => {
-        if (link.href === window.location.href) {
-            e.preventDefault(); // Stop the reload entirely
-            console.log(
-                "Already on this page, ignoring click to save the music.",
-            );
-        }
+        ],
     });
-});
+
+    // prevents loading the same page
+    document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+            if (link.href === window.location.href) {
+                e.preventDefault(); // Stop the reload entirely
+                console.log(
+                    "Already on this page, ignoring click to save the music.",
+                );
+            }
+        });
+    });
+}

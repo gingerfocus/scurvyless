@@ -1,16 +1,14 @@
 # Scurvyless
-## Site
-Website is hosted publically [here](https://gingerfocus.dev).
+Website is hosted [here](https://gingerfocus.dev).
 
-css styles based on [this](https://github.com/panr/hugo-theme-terminal).
-
-## Developing
-To host locally:
+## Building
+Building requires zig and pandoc:
 ```bash
-./mk.sh build # watch
-./mk.sh serve
-
-# OR: for a live environment
-
-./mk.sh develop
+sh mk.sh build
 ```
+
+You can then use any web server. By default uses python:
+```bash
+sh mk.sh serve
+```
+

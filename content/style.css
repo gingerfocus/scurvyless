@@ -1,0 +1,90 @@
+:root {
+    --bg-color: #1a170f;
+    --fg-color: #eceae5;
+    --ac-color: #c77638; /* #eec35e; #673680; */
+}
+
+/*
+@font-face {
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(/fonts/fira.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/pt-it.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/pt-ib.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/pt-no.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "PT Serif";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/pt-bo.woff2) format("woff2");
+}
+*/
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    line-height: 1.2;
+    font-size: 0.95rem;
+    padding: 20px;
+    max-width: 800px;
+    font-family: "PT Serif", serif;
+}
+
+pre {
+    font-family: "Fira Code", monospace;
+    border-width: 1px;
+    border-color: var(--ac-color);
+    border-style: solid;
+    padding: 5px;
+    background-color: #10100a;
+    overflow: hidden;
+    text-align: center;
+}
+
+a {
+    color: var(--ac-color);
+    text-decoration: none;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.title {
+    padding: 5px;
+    font-size: 1.4rem;
+    background-color: var(--ac-color);
+    color: var(--bg-color);
+}
+
+.banner-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

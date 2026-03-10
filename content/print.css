@@ -1,0 +1,86 @@
+/*
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/type-reg.woff2");
+}
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url("/fonts/type-bld.woff2");
+}
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/type-itl.woff2");
+}
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url("/fonts/type-bit.woff2");
+}
+*/
+
+@media print {
+    body {
+        line-height: 1.1;
+        font-size: 10pt;
+        font-family: "Computer Modern Typewriter", monospace;
+        color: #000 !important;
+        background: #fff !important;
+    }
+
+    header,
+    footer {
+        display: none !important;
+    }
+
+    .title {
+        background-color: #fff !important;
+    }
+    a {
+        color: #000 !important;
+    }
+
+    p {
+        margin: 0;
+        text-indent: 2em;
+        orphans: 3;
+        widows: 3;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-size: 10pt !important;
+        margin: 1em 0 0 0;
+        padding: 0;
+        page-break-after: avoid;
+    }
+
+    h1 {
+        border-bottom: 0.5pt solid black;
+        margin-bottom: 1em;
+        display: block;
+    }
+
+    h2 {
+        font-weight: bold;
+    }
+
+    h3,
+    h4,
+    h5 {
+        font-style: italic;
+    }
+}
