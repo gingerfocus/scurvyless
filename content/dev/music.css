@@ -1,0 +1,64 @@
+.barba-container {
+    transition: opacity 0.3s ease-in-out;
+}
+.barba-leave-active {
+    opacity: 0;
+}
+.barba-enter {
+    opacity: 0;
+}
+
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    padding: 12px;
+    border: 1px solid var(--ac-color);
+    box-shadow: 4px 4px 0px var(--ac-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the text above buttons */
+    gap: 8px;
+}
+
+#player-controls {
+    display: flex;
+    flex-direction: row; /* Buttons in a line */
+    gap: 10px;
+}
+
+/* Base style for all controls */
+#player-controls button {
+    background: var(--ac-color);
+    color: var(--bg-color);
+    border: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+}
+
+#player-controls button:hover {
+    filter: brightness(1.2);
+}
+
+#player-controls button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+#now-playing {
+    margin: 0;
+    font-family: "Fira Code", monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ac-color);
+}

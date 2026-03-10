@@ -1,4 +1,3 @@
-$if(publish)$
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
   <head>
@@ -10,6 +9,7 @@ $if(publish)$
     />
     <meta name="author" content="gingerfocus" />
     <meta name="description" content="; DROP TABLE bookmarks;" />
+    <link rel="icon" href="/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,6 @@ $if(publish)$
 
     <title>$pagetitle$</title>
 
-    <link rel="icon" href="/favicon.png" />
     <style>
       :root {
         --bg-color: #1a170f;
@@ -53,7 +52,7 @@ $if(publish)$
         padding: 5px;
         background-color: #10100a;
         overflow: hidden;
-        text-align: center; 
+        text-align: center;
       }
 
       a {
@@ -72,7 +71,7 @@ $if(publish)$
         color: var(--bg-color);
       }
 
-      .banner-links {
+      .banner-line {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -87,9 +86,17 @@ $if(publish)$
           background: #fff !important;
         }
 
-        .banner-links {display: none !important;}
-        .title {background-color: #fff !important;}
-        a { color: #000 !important;}
+        header,
+        footer {
+          display: none !important;
+        }
+
+        .title {
+          background-color: #fff !important;
+        }
+        a {
+          color: #000 !important;
+        }
 
         p {
           margin: 0;
@@ -98,7 +105,11 @@ $if(publish)$
           widows: 3;
         }
 
-        h1, h2, h3, h4, h5 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
           font-size: 10pt !important;
           margin: 1em 0 0 0;
           padding: 0;
@@ -111,27 +122,59 @@ $if(publish)$
           display: block;
         }
 
-        h2 {font-weight: bold;}
+        h2 {
+          font-weight: bold;
+        }
 
-        h3, h4, h5 {font-style: italic;}
-
+        h3,
+        h4,
+        h5 {
+          font-style: italic;
+        }
+      }
     </style>
   </head>
-  <body>
+  <body data-barba="wrapper">
     <header>
-      <div class="banner-links">
+      <nav class="banner-line banner-links">
         <a href="/">Home</a>
         <a href="/blog/">Blog</a>
         <!-- <a href="/fict">Fiction</a> -->
         <!-- <a href="/resh">Research</a> -->
         <!-- <a href="/metro">Metro</a> -->
         <a href="https://github.com/gingerfocus/scurvyless">Source</a>
-      </div>
-      $if(title)$
-      <h1 class="title">$title$</h1>
-      $endif$
+      </nav>
     </header>
-    $body$
+
+    <main data-barba="container" data-barba-namespace="home">
+      $if(publish)$
+
+      <h1 class="title">$title$</h1>
+      <div class="banner-line">
+        $if(date)$ <em>Published $date$</em>$endif$ $if(edit)$
+        <em>Edited $edit$</em>$endif$ $if(author)$ <em> By $author$</em> $endif$
+      </div>
+      $body$
+      <hr />
+      $else$
+      <strong>Document not ready set to publish.</strong>
+      <a href="/">Go Home</a>
+      $endif$
+    </main>
+
+    <footer>
+      <div class="audio-player">
+        <div id="player-controls">
+          <button id="prev-btn" aria-label="Previous">PREV</button>
+          <button id="play-pause-btn" aria-label="Play/Pause">PLAY</button>
+          <button id="next-btn" aria-label="Skip">NEXT</button>
+          <button id="copy-btn" aria-label="Copy">COPY</button>
+        </div>
+        <audio id="main-audio" hidden></audio>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.10.3/dist/barba.umd.js"></script>
+      <script src="/dev/music.js"></script>
+      <link rel="stylesheet" type="text/css" href="/dev/music.css" />
+    </footer>
   </body>
 </html>
-$else$ Document not ready set to publish. $endif$

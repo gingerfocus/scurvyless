@@ -43,5 +43,5 @@ Stuff to talk.
 
 - [About](/about.html): Who am I?
 <!-- - [Resume](/#): TODO -->
-- [Email](mailto:evan.stokdyk@gmail.com): I try to respond to all comments.
+- Email: (evan dot stokdyk at gmail) I try to respond to all comments.
 

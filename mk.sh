@@ -18,7 +18,7 @@ case "$1" in
         # air
         ;;
     "deploy" | "D")
-        rsync -rv $BUILD_DIR focus@gingerfocus.dev:/var/www/scurvyless --delete
+        rsync -rv $BUILD_DIR focus@104.207.148.71:/var/www/scurvyless --delete
         ;;
     "develop" | "dev" | "d")
         [ -n "$TMUX" ] || (echo "Must be run in tmux" && exit 1)

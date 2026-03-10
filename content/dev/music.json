@@ -1,0 +1,34 @@
+[
+    {
+        "song": "/music/01-sonora.ogg",
+        "desc": "example 1"
+    },
+    {
+        "song": "/music/02-old-country.ogg",
+        "desc": "example 2"
+    },
+    {
+        "song": "/music/03-stella-by-starlight.ogg",
+        "desc": "example 3"
+    },
+    {
+        "song": "/music/04-chasin-the-bird.ogg",
+        "desc": "example 4"
+    },
+    {
+        "song": "/music/05-soultrane.ogg",
+        "desc": "example 5"
+    },
+    {
+        "song": "/music/06-speak-low.ogg",
+        "desc": "example 6"
+    },
+    {
+        "song": "/music/07-nobody-knows-the-trouble-ive-seen.ogg",
+        "desc": "example 7"
+    },
+    {
+        "song": "/music/08-be-my-love.ogg",
+        "desc": "example 8"
+    }
+]
